@@ -1,5 +1,5 @@
 Given(/^I access the book store$/) do
-  pending # Write code here that turns the phrase above into concrete actions
+  visit '/'
 end
 
 When(/^I provide personal information to create a new account$/) do

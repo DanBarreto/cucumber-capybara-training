@@ -12,6 +12,8 @@ When(/^I provide personal information to create a new account$/) do
 end
 
 Then(/^I successfully sign up$/) do
-  success_message = find('#flash_notice', text: 'Thank you for signing up! You are now logged in.')
-  expect(success_message).to be_visible
+  expect(page.current_path).to eq('/')
+  expect(page).to have_css('#flash_notice', text: 'Thank you for signing up!')
+  expect(page).not_to have_link('Sign up')
+  expect(page).to have_link('Log out')
 end

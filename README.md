@@ -7,7 +7,7 @@ Just a project to play around with Cucumber and Capybara using an e-commerce app
 - [PhantomJS] (http://phantomjs.org/)
 - [Demo Active Admin](https://github.com/rafalima/demo.activeadmin.info) (version forked by [rafalima](https://github.com/rafalima))
 
-> I you are an OS X user, I strongly recommend using [Homebrew](http://brew.sh/) and [Rbenv](https://github.com/rbenv/rbenv)
+> If you are an OS X user, I strongly recommend using [Homebrew](http://brew.sh/) and [Rbenv](https://github.com/rbenv/rbenv)
 > to set everything up
 
 ## How to run

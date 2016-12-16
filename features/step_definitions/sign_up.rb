@@ -17,3 +17,15 @@ Then(/^I successfully sign up$/) do
   expect(page).not_to have_link('Sign up')
   expect(page).to have_link('Log out')
 end
+
+When(/^I attempt to log into the application with invalid credentials$/) do
+  click_link('Log in')
+  fill_in(id: 'login', with: 'johndoe')
+  fill_in(id: 'password', with: 'foobar')
+  click_button('Log in')
+end
+
+Then(/^I cannot sign in$/) do
+  expect(page.current_path).to eq('/sessions')
+  expect(page).to have_css('#flash_error', text: 'Invalid login or password.')
+end
